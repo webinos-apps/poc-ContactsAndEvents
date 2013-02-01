@@ -32,22 +32,6 @@ $(document).ready(function() {
 			          if(!search_enterd){
 			          alert('Enter the value into search field')
 			          }   else {
-
-			     /* if ( contacManager.permissions.type=='remote'){
-			    	  usr = $('#usernameText').val();
-			          pwd = $('#passwordText').val();
-			          parameters.usr = usr;
-			          parameters.pwd = pwd;
-			          parameters.type = "remote";
-			       
-			      }
-			      else if (contacManager.permissions.type=='local'){
-			    	  
-			          parameters.addressBookName = contacManager.permissions.;
-			          parameters.type = "local";
-			        //contactsService[0]			       		      
-			       }*/
-			    //  contacManager.permissions = parameters;
 			      
 			      contacManager.getContacts(printContactNames); 
 			    }

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('#cnt_remote').bind('click', function() {
+	/*$('#cnt_remote').bind('click', function() {
 		console.log('Remote methode');
 		$('#remoteAuth ').show();
 		$('#localAuth').hide();
@@ -10,7 +10,7 @@ $(document).ready(function() {
 		console.log('Local methode');
 		$('#localAuth').show();
 		$('#remoteAuth ').hide();
-	});
+	});*/
 	
 	 $('#btnSaveSettings').bind('click', function() {
 		 	console.log("button clicked", storer);

@@ -47,12 +47,7 @@ contacManager.init = function(successcb, errorcb) {
 	contacManager.getContactService(function (svc) {
 		contacManager.contactService = svc;	
 		document.getElementById('connectionInfo').innerHTML = ""
-		 contacManager.contactService.authenticate(contacManager.permissions, successcb);	 
-		 
-		/* contacManager.contactService.isAlreadyAuthenticated(contacManager.permissions, function(result)
-		{			 
-			    	contacManager.contactService.find(contacManager.permissions, printContactNames);
-		});*/
+		 contacManager.contactService.syncGoogleContacts(contacManager.permissions, successcb, errorcb);	 
 	 }, function (err) {
      console.log(err.code);
      console.log(err);
@@ -63,9 +58,10 @@ contacManager.init = function(successcb, errorcb) {
 contacManager.getContacts = function(found) {	
 	contacManager.init(handleAuthenticationQuery, unreachableService);
 	contacManager.getContactService(function (svc) {
-		contacManager.contactService.isAlreadyAuthenticated(contacManager.permissions, function(result){			 
+		/*contacManager.contactService.isAlreadyAuthenticated(contacManager.permissions, function(result){			 
 		  contacManager.contactService.find(contacManager.permissions, found);
-		});
+		});*/
+		contacManager.contactService.find(contacManager.permissions.fields, found);
 	}, function (err) {
 	     console.log(err.code);
 	     console.log(err);

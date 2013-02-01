@@ -11,14 +11,14 @@ storer.createSettingObject = function() {
       pwd = $('#passwordText').val();
       parameters.usr = usr;
       parameters.pwd = pwd;
-      parameters.type = "remote";
+     // parameters.type = "remote";
 
     }
-    else if ($("input[@name='contactType']:checked").val() == 'local') {
+   /* else if ($("input[@name='contactType']:checked").val() == 'local') {
       addressBookName = $('#addressBookNameText').val();
       parameters.addressBookName = addressBookName;
       parameters.type = "local";
-    }
+    }*/
     return parameters;
 };
 
@@ -118,6 +118,7 @@ storer.saveTextFile = function(dir, val, filename, successcb, errorcb) {
 };
 
 storer.getDirectories = function(fileService, successcb, errorcb) {
+	console.log("fileService=", fileService);
     storer.getFileSystem(fileService, onInitFs, fsErrorHandler);
 
     function onInitFs(fs) {
