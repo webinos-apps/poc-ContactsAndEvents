@@ -30,22 +30,12 @@ $(document).ready(function() {
 			     
 	});
 	 
-	 storer.getSettings(function (data) {		 
-		  
-		  console.log("Settings!!!! ", data);
-		  if(data.type =="remote"){
-			  $("#cnt_remote").attr("checked", "checked");;
-			  $("#usernameText").val(data.usr);
-			  $("#passwordText").val(data.pwd);
-			 // console.log($("#usernameText"));
-			  
-			  
-		  }else{
-			  $("#cnt_local").attr("checked", "checked");;
-			  $("#addressBookNameText").val(data.addressBookName);
-			  //console.log($("#addressBookNameText"));			  
-		  }	
-		  $("input[@name='contactType']:checked").trigger('click');
+	 storer.getSettings(function (data) {
+		 		console.log("Settings!!!! ", data);
+				$("#usernameText").val(data.usr);
+				$("#passwordText").val(data.pwd);
+			 
+		//  $("input[@name='contactType']:checked").trigger('click');
 	     
 	        
 	    }, function (err) {
