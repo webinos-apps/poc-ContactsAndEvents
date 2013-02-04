@@ -5,20 +5,11 @@ storer.fileService = null;
 storer.fileSystem = null;
 
 storer.createSettingObject = function() {
-	parameters = {};
-    if ($("input[@name='contactType']:checked").val() == 'remote') {
+	parameters = {};   
       usr = $('#usernameText').val();
       pwd = $('#passwordText').val();
       parameters.usr = usr;
-      parameters.pwd = pwd;
-     // parameters.type = "remote";
-
-    }
-   /* else if ($("input[@name='contactType']:checked").val() == 'local') {
-      addressBookName = $('#addressBookNameText').val();
-      parameters.addressBookName = addressBookName;
-      parameters.type = "local";
-    }*/
+      parameters.pwd = pwd;    
     return parameters;
 };
 
