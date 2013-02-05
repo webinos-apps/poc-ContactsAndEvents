@@ -108,6 +108,12 @@ $(document).ready(function() {
 		 	console.log("button clicked");
 	      setMainPage("searchPage.html");
 	    });
+		
+	/*$('#btnchatPage').bind('click', function() {
+		 	console.log("button clicked");
+	      setMainPage("index.html");
+	    }); */
+		
     webinos.session.addListener('info', printInfo);
     
     //new page for person
