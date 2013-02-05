@@ -66,18 +66,11 @@ html * {
 
 body {
    height:100%;
-   background-color:#3A362D;
+   background-color: #F8F8F8;
    font-family:Helvetica, Arial, sans-serif;
-   color: #F8F8F8;
+   color: #3A362D;
    padding-top: 50px;
 }
-
-a:link {
-    color: #14A5FF; /* ÷вет ссылок */
-   }
-   a:visited {
-    color: #3F78FD; /* ÷вет посещенных ссылок */
-   }
 
 p {
    -webkit-margin-before: 0px;
@@ -104,34 +97,34 @@ li {
 }
 
 .button, input[type="submit"], input[type="button"] {
-   background: #535353; /* Old browsers */
-   background: -moz-linear-gradient(top, #535353 0%, #6A6A6A 100%); /* FF3.6+ */
-   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#535353), color-stop(100%,#6A6A6A)); /* Chrome,Safari4+ */
-   background: -webkit-linear-gradient(top, ##535353 0%,#6A6A6A 100%); /* Chrome10+,Safari5.1+ */
-   background: -o-linear-gradient(top, ##535353 0%,#6A6A6A 100%); /* Opera 11.10+ */
-   background: -ms-linear-gradient(top, ##535353 0%,#6A6A6A 100%); /* IE10+ */
-   background: linear-gradient(top, ##535353 0%,#6A6A6A 100%); /* W3C */
-   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#535353', endColorstr='#6A6A6A',GradientType=0 ); /* IE6-9 */
+   background: #90db3a; /* Old browsers */
+   background: -moz-linear-gradient(top, #90db3a 0%, #61c314 100%); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#90db3a), color-stop(100%,#61c314)); /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(top, #1C3300 0%,#1C3300 100%); /* Chrome10+,Safari5.1+ */
+   background: -o-linear-gradient(top, #90db3a 0%,#61c314 100%); /* Opera 11.10+ */
+   background: -ms-linear-gradient(top, #90db3a 0%,#61c314 100%); /* IE10+ */
+   background: linear-gradient(top, #90db3a 0%,#61c314 100%); /* W3C */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#90db3a', endColorstr='#61c314',GradientType=0 ); /* IE6-9 */
    -webkit-border-radius: 10px;
    -moz-border-radius: 10px;
    border-radius: 10px;
-   border:1px solid #535353;
-   border-top:1px solid #6A6A6A;
+   border:1px solid #43870e;
+   border-top:1px solid #61c314;
    color: #FFFFFF;
-   text-shadow: 0 0px 0px #a5df78;
+   text-shadow: 0 1px 1px #a5df78;
    line-height:26px;
    text-align:center;
    text-decoration:none;
    display:inline-block;
-   width: 140px;
-  // float: right;
+   width: 80px;
+   float: right;
    font-size: 14px;
    font-weight: bold;
 }
 
 label {
    font-weight: normal;
-  /* float: left;*/
+   float: left;
    line-height: 30px;
 }
 
@@ -141,14 +134,14 @@ label span {
 
 /* header background black */
 header {
-   background: #14A5FF; /* Old browsers */
-   background: -moz-linear-gradient(top, #14A5FF 0%, #3F78FD 100%); /* FF3.6+ */
-   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#14A5FF), color-stop(100%,#3F78FD)); /* Chrome,Safari4+ */
-   background: -webkit-linear-gradient(top, #14A5FF 0%,#3F78FD 100%); /* Chrome10+,Safari5.1+ */
-   background: -o-linear-gradient(top, #14A5FF 0%,#3F78FD 100%); /* Opera 11.10+ */
-   background: -ms-linear-gradient(top, #14A5FF 0%,#3F78FD 100%); /* IE10+ */
-   background: linear-gradient(top, #14A5FF 0%,#3F78FD 100%); /* W3C */
-   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#14A5FF', endColorstr='#3F78FD',GradientType=0 ); /* IE6-9 */
+   background: #90db3a; /* Old browsers */
+   background: -moz-linear-gradient(top, #90db3a 0%, #61c314 100%); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#90db3a), color-stop(100%,#61c314)); /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(top, #1C3300 0%,#1C3300 100%); /* Chrome10+,Safari5.1+ */
+   background: -o-linear-gradient(top, #90db3a 0%,#61c314 100%); /* Opera 11.10+ */
+   background: -ms-linear-gradient(top, #90db3a 0%,#61c314 100%); /* IE10+ */
+   background: linear-gradient(top, #90db3a 0%,#61c314 100%); /* W3C */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#90db3a', endColorstr='#61c314',GradientType=0 ); /* IE6-9 */
    border-bottom:1px solid #1C3300;
    min-height:50px;
    height:50px;
