@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+-->
+<html>
+<head>
+   	<title>Chat</title>
+   	<meta charset="utf-8">
+   	<link rel="stylesheet" href="css/chat.css"> 
+	<link rel="stylesheet" href="css/main.css"> 
+	<script type="text/javascript" src="../../webinos.js"></script>
+	<script type="text/javascript" src="js/chat.js"></script>
+	<script type="text/javascript" src="js/Contact.js"></script>
+	<script type="text/javascript" src="js/contactManager.js"></script>
+	<script type="text/javascript" src="js/globals.js"></script>
+	<script type="text/javascript" src="js/storersettings.js"></script>
+	<script type="text/javascript" src="js/Authenticate.js"></script>
+	<script type="text/javascript" src="js/authenticateTwitter.js"></script>
+
+</head>
+<body>
+   <header>
+      <h1>Chat</h1>
+   </header>
+
+   <div id="content">
+      <div id="myName2"></div>
+	  
+
+      <div id="home">
+         <div id="leftbox" class="left box">
+            <p class="header">Your online contacts:</p>
+            <ul id="onlineContacts">
+
+            </ul>
+         </div>
+         <div id="rightbox" class="right box">
+            <p class="header">Your Chat invitations:</p>
+            <ul id="liveInvitations">
+
+            </ul>
+         </div>
+      </div>
+
+     <div id="app">
+		<div id="appbox"> 
+		   <div class="menu">
+			  <ul id="media">
+				 <li class="button2">
+					<div id="textButton"> Text </div>
+				 </li>
+			  </ul>
+			  <ul id="control">
+				 <li id="endElem" class="button2">
+					<div id="endButton"> Exit </div>
+				 </li>
+				 <li id="setElem" class="button2">
+					<div id="setButton"> Settings </div>
+				 </li>
+			  </ul>
+		   </div>
+		   <div id="deck-box" class="box">
+		   </div> 
+		   <div id="play-box" class="box"> 
+			  <div> 
+			  <div></div>
+				 <div id="mid-box">  
+					<div id="middle">
+					   <div id="status">
+						  <div id="status-text"></div>
+						  <div id="cont-button"></div>
+					   </div>  
+					   <div id="chat">
+						  <div id="chatBox"></div>
+						  <div id="chatText"><input type="text" id="chatInput"></div>
+						  <div id="chatButton"><a class="button">Send</a></div>
+					   </div>
+					</div> 
+				 </div> 
+				 <div>
+				 </div>
+			  </div>
+		   </div> 
+		</div>
+      </div>  
+
+		<div id="sett">
+			<div class="box">
+				<div class="group">
+					<p class="header">Chat Settings:</p>
+					<p class="options">Font Color:
+						<select id="mcolor" name="color">
+							<option value="black">Black</option>
+							<option value="red">Red</option>
+							<option value="green">Green</option>
+							<option value="blue">Blue</option>
+						</select>
+					</p>
+					<p class="options">Font Style:
+						<select id="mfamily" name="style">
+							<option value="sans-serif">Dafault</option>
+							<!--<option value="ANaRcHy">ANaRcHy</option>-->
+							<option value="AmadeusRegular">AmadeusRegular</option>
+							<option value="SpecialEliteRegular">SpecialEliteRegular</option>
+							<option value="ScratchmybackRegular">ScratchmybackRegular</option>
+						</select>
+					</p>
+					<p class="options">Font Size:
+						<select id="msize" name="size">
+							<option value="100%">100%</option>
+							<option value="120%">120%</option>
+							<option value="150%">150%</option>
+						</select>
+					</p>
+				</div>
+				<div class="group">
+					<p class="header">Opponent Chat:</p>
+					<p class="options">Font Color:
+						<select id="ocolor" name="color">
+							<option value="black">Black</option>
+							<option value="red">Red</option>
+							<option value="green">Green</option>
+							<option value="blue">Blue</option>
+						</select>
+					</p>
+					<p class="options">Font Style:
+						<select id="ofamily" name="style">
+							<option value="sans-serif">Dafault</option>
+							<!--<option value="ANaRcHy">ANaRcHy</option>-->
+							<option value="AmadeusRegular">AmadeusRegular</option>
+							<option value="SpecialEliteRegular">SpecialEliteRegular</option>
+							<option value="ScratchmybackRegular">ScratchmybackRegular</option>
+						</select>
+					</p>
+					<p class="options">Font Size:
+						<select id="osize" name="size">
+							<option value="100%">100%</option>
+							<option value="120%">120%</option>
+							<option value="150%">150%</option>
+						</select>
+					</p>
+				</div>
+
+				<div class="group">
+					<p class="header">Policy Settings: </p>
+					<p class="options">Status:
+						<select id="mstatus" name="status">
+							<option value="available">Available</option>
+							<option value="offline">Invisible</option>
+						</select>
+					</p>
+				</div>
+				<div class="group">
+					<a class="button red" id="cancelsettings" >Cancel</a>
+					<a class="button" id="savesettings">Save</a>
+				</div>
+			</div>
+		</div>
+   </div>
+   
+   <footer>
+      <div> <p id="frontStatus">Not connected to webinos</p> </div>
+      <img src="img/webinos.png" alt="webinos" width="104" height="40" />
+   </footer>
+</body>
+</html>
