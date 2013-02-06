@@ -63,6 +63,14 @@ a:link {
     color: #3F78FD; /* Цвет посещенных ссылок */
    }
 
+.sectionLayout{	
+	    overflow: auto; /* Добавляем полосы прокрутки */
+	    //width: 300px; /* Ширина блока */
+	    height: 700px; /* Высота блока */
+	    padding: 5px; /* Поля вокруг текста */
+	   // border: solid 1px black; /* Параметры рамки */
+	   
+}   
 button {
 	background: #535353;
 	border: 1px solid  #14A5FF;
