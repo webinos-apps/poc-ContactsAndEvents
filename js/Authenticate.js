@@ -109,10 +109,10 @@ $(document).ready(function() {
 	      setMainPage("searchPage.html");
 	    });
 		
-	/*$('#btnchatPage').bind('click', function() {
+	$('#btnchatPage').bind('click', function() {
 		 	console.log("button clicked");
 	      setMainPage("index.html");
-	    }); */
+	    }); 
 		
     webinos.session.addListener('info', printInfo);
     
