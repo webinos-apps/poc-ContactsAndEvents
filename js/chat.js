@@ -123,10 +123,11 @@ function sendInvitation(type, inviter, invitee) {
 // function added by Polito
 // this is a workaround. In the future, in multi-PZH scenarios, the plan is to obtain the userID from the platform.
 // However, the option to change the userID obtained could be kept, keeping the following mechanism as well.
-ready(function() {
+$(document).ready(function() {
 	webinos.ServiceDiscovery.findServices(new ServiceType('http://webinos.org/api/events'),
 		{
 		onFound: function(service){
+			console.log("Chat:events service found!!", service);
 			eventAPIToUse = service;
 			chat1.unavailableNames = [];
 			chat1.myName = webinos.messageHandler.getOwnId();
