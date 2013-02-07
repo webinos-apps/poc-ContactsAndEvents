@@ -38,6 +38,7 @@ $(document).ready(function() {
 	 
 	 storer.getSettings(function (data) {
 		 		console.log("Settings!!!! ", data);
+				$("#chatusernameText").val(data.chatusr);
 				$("#usernameText").val(data.usr);
 				$("#passwordText").val(data.pwd);
 			 

@@ -5,9 +5,11 @@ storer.fileService = null;
 storer.fileSystem = null;
 
 storer.createSettingObject = function() {
-	parameters = {};   
+	parameters = {}; 
+	  chatusr = $('#chatusernameText').val();
       usr = $('#usernameText').val();
       pwd = $('#passwordText').val();
+	  parameters.chatusr = chatusr;
       parameters.usr = usr;
       parameters.pwd = pwd;    
     return parameters;
