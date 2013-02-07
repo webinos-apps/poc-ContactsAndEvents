@@ -100,7 +100,7 @@ li {
    background: #90db3a; /* Old browsers */
    background: -moz-linear-gradient(top, #90db3a 0%, #61c314 100%); /* FF3.6+ */
    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#90db3a), color-stop(100%,#61c314)); /* Chrome,Safari4+ */
-   background: -webkit-linear-gradient(top, #1C3300 0%,#1C3300 100%); /* Chrome10+,Safari5.1+ */
+   background: -webkit-linear-gradient(top, #90db3a 0%,#61c314 100%); /* Chrome10+,Safari5.1+ */
    background: -o-linear-gradient(top, #90db3a 0%,#61c314 100%); /* Opera 11.10+ */
    background: -ms-linear-gradient(top, #90db3a 0%,#61c314 100%); /* IE10+ */
    background: linear-gradient(top, #90db3a 0%,#61c314 100%); /* W3C */
@@ -163,14 +163,14 @@ header h1 {
 
 /* content */
 #content {
-   background: #ffffd6; /* Old browsers */
-   background: -moz-linear-gradient(top, #ffffd6 0%, #fffff0 46%, #fffff0 54%, #ffffd6 100%); /* FF3.6+ */
-   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffd6), color-stop(46%,#fffff0), color-stop(54%,#fffff0), color-stop(100%,#ffffd6)); /* Chrome,Safari4+ */
-   background: -webkit-linear-gradient(top, #BFD9D9 0%,#BFD9D9 46%,#BFD9D9 54%,#BFD9D9 100%); /* Chrome10+,Safari5.1+ */
-   background: -o-linear-gradient(top, #ffffd6 0%,#fffff0 46%,#fffff0 54%,#ffffd6 100%); /* Opera 11.10+ */
-   background: -ms-linear-gradient(top, #ffffd6 0%,#fffff0 46%,#fffff0 54%,#ffffd6 100%); /* IE10+ */
-   background: linear-gradient(top, #ffffd6 0%,#fffff0 46%,#fffff0 54%,#ffffd6 100%); /* W3C */
-   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffd6', endColorstr='#ffffd6',GradientType=0 ); /* IE6-9 */
+  // background: #ffffd6; /* Old browsers */
+  // background: -moz-linear-gradient(top, #ffffd6 0%, #fffff0 46%, #fffff0 54%, #ffffd6 100%); /* FF3.6+ */
+  // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffd6), color-stop(46%,#fffff0), color-stop(54%,#fffff0), color-stop(100%,#ffffd6)); /* Chrome,Safari4+ */
+  // background: -webkit-linear-gradient(top, #BFD9D9 0%,#BFD9D9 46%,#BFD9D9 54%,#BFD9D9 100%); /* Chrome10+,Safari5.1+ */
+  // background: -o-linear-gradient(top, #ffffd6 0%,#fffff0 46%,#fffff0 54%,#ffffd6 100%); /* Opera 11.10+ */
+  // background: -ms-linear-gradient(top, #ffffd6 0%,#fffff0 46%,#fffff0 54%,#ffffd6 100%); /* IE10+ */
+  // background: linear-gradient(top, #ffffd6 0%,#fffff0 46%,#fffff0 54%,#ffffd6 100%); /* W3C */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffd6', endColorstr='#ffffd6',GradientType=0 ); /* IE6-9 */
    text-align:center;
    padding: 40px 0;
    height:100%;
@@ -230,9 +230,9 @@ header h1 {
 
 #home #leftbox .button {
    background: #6ab7ea; /* Old browsers */
-   background: -moz-linear-gradient(top,  #6ab7ea 0%, #3b99d7 100%); /* FF3.6+ */
+   background: -moz-linear-gradient(top,  #6ab7ea 0%, #3F78FD 100%); /* FF3.6+ */
    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6ab7ea), color-stop(100%,#3b99d7)); /* Chrome,Safari4+ */
-   background: -webkit-linear-gradient(top,  #CCEBEB 0%,#CCEBEB 100%); /* Chrome10+,Safari5.1+ */
+   background: -webkit-linear-gradient(top,  #6ab7ea 0%,#3F78FD 100%); /* Chrome10+,Safari5.1+ */
    background: -o-linear-gradient(top,  #6ab7ea 0%,#3b99d7 100%); /* Opera 11.10+ */
    background: -ms-linear-gradient(top,  #6ab7ea 0%,#3b99d7 100%); /* IE10+ */
    background: linear-gradient(top,  #6ab7ea 0%,#3b99d7 100%); /* W3C */
@@ -270,17 +270,14 @@ header h1 {
 }
 
 #app .menu {
-   height: 62px;
-   position: absolute;
-   top: 70px;
-   left: 40px;
-   right: 40px;
+   height: 62px;   
+	margin: 30px 30px 30px 30px;
 }
 
 #app ul {
    padding: 0;
    height: 62px;
-   width: 50%;
+   width: 100%;
    float: left;
 }
 
@@ -360,12 +357,8 @@ header h1 {
    width: 40%;
 }
 
-#app #deck-box, #app #play-box {
-   position: absolute;
-   top: 150px;
-   bottom: 40px;
-   left: 40px;
-   right: 40px;
+#app #deck-box, #app #play-box {   
+	margin: 30px 30px 30px 30px;
    padding: 30px;
    border: 1px solid #dbc388;
    background-color: #CCEBEB;
@@ -449,12 +442,8 @@ header h1 {
    line-height:30px;
 }
 
-#sett .box {
-   position: absolute;
-   top: 90px;
-   bottom: 40px;
-   left: 40px;
-   right: 40px;
+#sett .box {  
+	margin: 30px 30px 30px 30px;
    padding: 30px;
    border: 1px solid #dbc388;
    background-color: #76927A;

@@ -16,7 +16,7 @@ $(document).ready(
 
 			}, function(err) {
 
-				$("#contactList").text("No settings found!");
+				$("#contactList").text('');
 				$('#noSettingsMessage').show();
 				console.log("Error:  " + err);
 			});
