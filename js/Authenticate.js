@@ -46,7 +46,7 @@ function printInfo(data) {
   };
 
 function unreachableService(data) {
-	document.getElementById('connectionInfo').innerHTML = "PROBLEM: Service unreachable";
+	//document.getElementById('connectionInfo').innerHTML = "PROBLEM: Service unreachable";
   };
 
 
