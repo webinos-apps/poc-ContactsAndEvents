@@ -1,6 +1,7 @@
+/* Modified the 13/2/2013 By Krishna Bangalore and Elena Medvedeva */
+
 var chat = {}; //this will hold other variables to avoid global namespace pollution
 var chatElements = {}; //this will hold html elements so we can avoid excessive DOM search
-
 
 /*File API Part to Retrieve the User Data from Settings*/
 chat.fileService = null;
@@ -143,27 +144,30 @@ chat.errorHandler = function(e) {
     return "Error: " + msg;
 };
 
+/*
 chat.getSettings(function (data) {
 		 		console.log("Settings!!!! ", data);
 				chatElements.homeScreenName.innerHTML = "Your screen name: <b>"+data.chatusr+"</b>";
 				chat.myName = data.chatusr;
-				//alert (chat.myName);
+				alert("Hi3");
+				alert (chat.myName); */
 			/*	$("#chatusernameText").val(data.chatusr);
 				$("#usernameText").val(data.usr);
 				$("#passwordText").val(data.pwd);*/			 
-		//  $("input[@name='contactType']:checked").trigger('click');
+		//  $("input[@name='contactType']:checked").trigger('click'); 
 	     	        
-	    }, function (err) {
+	  /*  }, function (err) {
 	    	
 	         $("#contactList").text("No settings found!");
 	        console.log("Error:  " + err);
-	    }); 
+	    });*/
 		
 /*Retrieval of User Data Ends Here*/
 		
 // Set initial values
 chat.users = [];
 chat.useMyDeck = false;
+chat.myName='';
 
 chat.settings = {};
 chat.settings.predefined = {
@@ -280,7 +284,6 @@ function sendInvitation(type, inviter, invitee) {
 })();
 
 
-// function added by Polito
 // this is a workaround. In the future, in multi-PZH scenarios, the plan is to obtain the userID from the platform.
 // However, the option to change the userID obtained could be kept, keeping the following mechanism as well.
 $(document).ready(function() {
@@ -291,7 +294,8 @@ $(document).ready(function() {
 			eventAPIToUse = service;
 			chat.unavailableNames = [];
 			//chat.myName = webinos.messageHandler.getOwnId();
-
+			//alert("Hi4" + chat.myName);
+			 
 			var listenerID = eventAPIToUse.addWebinosEventListener(function(event){
 				if (event.payload.type === 'nameResponse') {
 					chat.unavailableNames.push(event.payload.user);
@@ -356,9 +360,21 @@ function nameInput(listenerID) {
 		chat.myName = prompt("please insert a different name");
 	}*/
 
-	eventAPIToUse.removeWebinosEventListener(listenerID);
-	start();
-	setScreenName();
+//	eventAPIToUse.removeWebinosEventListener(listenerID);
+chat.getSettings(function (data) {
+		 		console.log("Settings!!!! ", data);
+				chatElements.homeScreenName.innerHTML = "Your screen name: <b>"+data.chatusr+"</b>";
+				chat.myName = data.chatusr;
+				//alert("Hi2" + chat.myName);
+                start();
+                //alert("Hi3" + chat.myName);
+	            setScreenName();
+
+	    }, function (err) {
+
+	         $("#contactList").text("No settings found!");
+	        console.log("Error:  " + err);
+	    });
 	
 	/*if (chat.myName !== null && chat.myName !== undefined && chat.myName !== '') {
 		start();
@@ -369,7 +385,6 @@ function nameInput(listenerID) {
 };
 
 
-// function modified by Polito
 // this is the former ready function, renamed to start and called from the current ready function
 var start = function() {
 
@@ -380,7 +395,7 @@ var start = function() {
 		}*/
 
 		switch(event.payload.type){
-		// event added by Polito
+		
 		case 'nameQuery':
 			sendStatus('nameResponse');
 			break;
@@ -400,7 +415,7 @@ var start = function() {
 			}
 			break;
 
-		case 'online':	//modified the filter for the policy management A. Longo 24.04.12
+		case 'online':	
 			if (event.payload.user !== chat.myName &&
 					(typeof chat.users[event.payload.user] === 'undefined' || chat.users[event.payload.user] == 'offline')
 			){ // Filter
@@ -543,7 +558,7 @@ var start = function() {
 		} // End of switch(event.payload.type)
 	});
 
-	// commented out by Polito
+	
 	/*function getURLParameter(name) {
 		return decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]);
 	}
@@ -559,6 +574,7 @@ var start = function() {
 
 function setScreenName() {
 	chatElements.homeScreenName.innerHTML = "Your screen name: <b>"+chat.myName+"</b>";
+    //alert("Hi" + chat.myName);
 	chatElements.frontStatus.innerHTML = "Connected to webinos chat";
 }
 
@@ -573,7 +589,7 @@ function showapp() {
 	chatElements.home.style.display = 'none';
 	chatElements.app.style.display = 'block';
 
-	chatElements.homeScreenName.style.display = 'none';
+	//chatElements.homeScreenName.style.display = 'none';
 }
 
 function showSettings() {
@@ -678,7 +694,7 @@ function addInvitation(user) {
 	var span = document.createElement('span');
 	span.appendChild(document.createTextNode(user));
 	label.appendChild(span);
-	label.appendChild(document.createTextNode(" invites you for a Chat."));
+	label.appendChild(document.createTextNode(" Invites you for a Chat."));
 	li.appendChild(label);
 
 	var anch = document.createElement('a');
@@ -739,7 +755,6 @@ function setContButton(opt) {
 function showTextChat() {
    chatElements.chat.style.display = 'table-row';
    chatElements.textButton.onclick = function() { hideTextChat(); };
-   //added to remove the incoming message notification A. Longo 30.04
    chatElements.textButton.style.border = 'none';
 }
 
@@ -752,26 +767,9 @@ function hideTextChat() {
 
 //app UI
 function setappUI(){
-//	chatElements.myName.innerHTML = chat.myName;
-//	chatElements.opponentName.innerHTML = chat.oName;
-//	document.getElementById("chatBox").innerHTML = '<input type="text" id="chatBx" height="200">';
 
-	//var newElem = document.getElementById("newElem");
-	//newElem.className = 'disabled';
-	//var endElem = document.getElementById("endElem");
-	//endElem.className = 'disabled';
-
-	//choseDecks();
 	showTextChat();
 
-	//initialize chat settings
-
-	/*if(chat.useMyDeck) {
-		choseDeck();
-		//showTextChat();
-	} else {
-		setStatusMessage("Waiting for the dealer...");
-	}*/
 };
 
 //sends user's chat message
@@ -807,22 +805,6 @@ function scrollDownChatBox() {
 }
 
 function setSettings() {
-	//	THOSE SETTINGS ARE OBSOLETE AND _BADLY IMPLEMENTED_!
-	//	but in the future - if stuff could be saved- settings should ALWAYS be put to chat.settings
-	//	the settings itself could be generated dynamically with this function, and options would have an index
-	//	going in/from the chat.settings (and not for example "150%")
-	//	So this function should be invoked then ONCE at start, and the settings button would have onclick=showSettings
-
-	//load previous settings in the dropdown lists
-	/*document.getElementById("mcolor").selectedIndex = getColorIndex(document.getElementById("chatInput").style.color);
-	document.getElementById("mfamily").selectedIndex = getFamilyIndex(document.getElementById("chatInput").style.fontFamily);
-	document.getElementById("msize").selectedIndex = getSizeIndex(document.getElementById("chatInput").style.fontSize);
-	document.getElementById("ocolor").selectedIndex = getColorIndex(chat.settings.opponent.color);
-	document.getElementById("ofamily").selectedIndex = getFamilyIndex(chat.settings.opponent.fontFamily);
-	document.getElementById("osize").selectedIndex = getSizeIndex(chat.settings.opponent.fontSize);
-	if(chat.invisible) {
-		document.getElementById("mstatus").selectedIndex = 1;
-	}*/
 
 	showSettings();
 };
@@ -972,7 +954,6 @@ function exitapp() {
    	sendStatus('appClosed');
 	sendStatus('notchatting');
 
-	// modified by Polito
 	// in order to not exit from the app but just from the app
 
 	//location.reload();
@@ -985,7 +966,6 @@ function exitapp() {
 		sendStatus('login');
 	}
 
-	// end of Polito modifications
 };
 
 function resetApp() {
