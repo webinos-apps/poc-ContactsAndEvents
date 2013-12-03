@@ -304,20 +304,20 @@ header h1 {
 
 #app li {
    width: 60px;
- //  height: 60px;
- //  -webkit-border-radius: 10px;
- //  -moz-border-radius: 10px;
- //  border-radius: 10px;
- //  background: #fae8a0; /* Old browsers */
-//   background: -moz-linear-gradient(top, #fae8a0 0%, #f7db6a 100%); /* FF3.6+ */
-//   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fae8a0), color-stop(100%,#f7db6a)); /* Chrome,Safari4+ */
- //  background: -webkit-linear-gradient(top, #fae8a0 0%,#f7db6a 100%); /* Chrome10+,Safari5.1+ */
- //  background: -o-linear-gradient(top, #fae8a0 0%,#f7db6a 100%); /* Opera 11.10+ */
- //  background: -ms-linear-gradient(top, #fae8a0 0%,#f7db6a 100%); /* IE10+ */
- //  background: linear-gradient(top, #fae8a0 0%,#f7db6a 100%); /* W3C */
- //  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fae8a0', endColorstr='#f7db6a',GradientType=0 ); /* IE6-9 */
- //  border:1px solid #cbae39;
-//   border-top:1px solid #f7db6a;
+   height: 60px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+   background: #fae8a0; /* Old browsers */
+   background: -moz-linear-gradient(top, #fae8a0 0%, #f7db6a 100%); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fae8a0), color-stop(100%,#f7db6a)); /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(top, #fae8a0 0%,#f7db6a 100%); /* Chrome10+,Safari5.1+ */
+   background: -o-linear-gradient(top, #fae8a0 0%,#f7db6a 100%); /* Opera 11.10+ */
+   background: -ms-linear-gradient(top, #fae8a0 0%,#f7db6a 100%); /* IE10+ */
+   background: linear-gradient(top, #fae8a0 0%,#f7db6a 100%); /* W3C */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fae8a0', endColorstr='#f7db6a',GradientType=0 ); /* IE6-9 */
+   border:1px solid #cbae39;
+   border-top:1px solid #f7db6a;
    display: table;
 }
 
@@ -356,8 +356,8 @@ header h1 {
    padding: 5px;
    font-size: 13px;
    font-weight: bold;
-  // color: #534a28;
-  // text-shadow: 0 1px 1px #fae8a0;
+   color: #534a28;
+   text-shadow: 0 1px 1px #fae8a0;
 }
 
 #app .box > div {
@@ -685,6 +685,6 @@ footer img {
 	font-weight: bold;
 }
 
-.button {
+.button, .button2 {
 	cursor:pointer; cursor:hand;
 }

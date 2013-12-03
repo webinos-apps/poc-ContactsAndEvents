@@ -247,43 +247,6 @@ function sendInvitation(type, inviter, invitee) {
 }
 
 
-/* Equivalent to jquery's ready()
- * Notifies listeners when the DOM finished parsing (while images and css may still load) */
-
-
-(function(){
-	var readyListener = [];
-
-	var loaded = function() {
-		window.removeEventListener("load", loaded, false);
-		document.removeEventListener("DOMContentLoaded", loaded, false);
-
-		for (var i = 0; i < readyListener.length; i++) {
-			setTimeout(readyListener[i], 1);
-		}
-		readyListener = [];
-	};
-
-	// The case where ready() is called after the DOM is loaded already
-	if (document.readyState === "complete") {
-		// Handle it asynchronously to allow scripts the opportunity to delay ready
-		return setTimeout(loaded, 1);
-	};
-
-	if (document.addEventListener) {
-		document.addEventListener("DOMContentLoaded", loaded, false);
-
-		// A fallback to window.onload, that will always work
-		window.addEventListener("load", loaded, false);
-	};
-
-	// Call this to register your DOM ready listener function
-	ready = function(listener) {
-		readyListener.push(listener);
-	};
-})();
-
-
 // this is a workaround. In the future, in multi-PZH scenarios, the plan is to obtain the userID from the platform.
 // However, the option to change the userID obtained could be kept, keeping the following mechanism as well.
 $(document).ready(function() {
