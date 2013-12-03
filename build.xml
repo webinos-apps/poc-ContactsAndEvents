@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="pocContactsAndEvents" default="make-all" basedir="./">
+        <target name="gen-wgt" depends="clean">
+                <!-- Creates the widget -->
+                <zip destfile="${basedir}/${app}.wgt">
+                        <zipfileset dir="${basedir}/" 
+                        excludes="
+                                **/.gitignore
+                                **/*.iml
+								**/build.xml
+								**/README.md
+								**/*.psd
+								**/*.bak" />
+                </zip>
+        </target>
+
+        <target name="clean">
+            <!-- Removes precompiled widget -->
+            <delete quiet="true" file="${basedir}/${app}.wgt" />
+        </target>
+		
+		<target name="ContactsAndEvents">
+			<antcall target="gen-wgt">
+				<param name="app" value="ContactsAndEvents"/>
+			</antcall>
+		</target>
+		
+        
+        <target name="make-all">
+            <antcall target="ContactsAndEvents" />
+        </target>
+        
+</project>

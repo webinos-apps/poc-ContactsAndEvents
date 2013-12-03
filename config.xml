@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns       = "http://www.w3.org/ns/widgets"
+        id          = "http://webinos.org/apps/contactsAndEventsTestbed"
+        version     = "1.0"
+        height      = "768"
+        width       = "1024"
+        viewmodes   = "fullscreen">
+ 
+  <name short="device orientation">
+   webinos contact API and Event API testbed.
+  </name>
+
+  <description>
+    With this widget you can see the contact API and play with a chat application
+  </description>
+
+  <author email="hello@webinos.org">Krishna Bangalore</author>
+  <content src="index.html"/>
+</widget>
